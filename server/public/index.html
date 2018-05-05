@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,22 @@
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/angular-route.min.js"></script>
     <script src="scripts/client.js"></script>
+    <script src="scripts/services/property.service.js"></script>
+    <script src="scripts/controllers/addnew.controller.js"></script>
 </head>
+
 <body ng-app="HouseApp">
-    <h1>Find a building to live inside</h1>
+    <div id="pageHeader">
+        <h1>House It Going?</h1>
+    </div>
+    <div id="links">
+            <a class="nav" href="#!/">Add New Listing</a>
+            <a class="nav" href="#!/sale">For Sale</a>
+            <a class="nav" href="#!/rent">For Rent</a>
+    </div>
     <ng-view>
         <!-- ngStuff goes here -->
     </ng-view>
 </body>
+
 </html>

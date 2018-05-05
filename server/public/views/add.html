@@ -1,0 +1,35 @@
+<h4 class="sectionHeader">Add New Listing</h4>
+
+<div class="container">
+    <form class="col-md-12" ng-submit="vm.addProp(vm.newProp)">
+        <div class="form-group col-md-6">
+            <label for="cost">Cost: </label>
+            <input class="form-control" name="cost" type="number" ng-model="vm.newProp.cost" required />
+            <label for="sqft">Square Footage: </label>
+            <input class="form-control" name="sqft" type="number" ng-model="vm.newProp.sqft" required />
+            <label for="kind">For: </label>
+            <select class="form-control" ng-value="vm.newProp.kind" name="kind">
+                <option>Rent</option>
+                <option>Sale</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="city">City: </label>
+            <input class="form-control" name="city" type="text" ng-model="vm.newProp.city" required/>
+            <label for="image_path">Image Path: </label>
+            <select name="image_path" class="form-control" ng-model="vm.newProp.image_path">
+                <option value="rental.jpg">rental.jpg</option>
+                <option value="rental2.jpg">rental2.jpg</option>
+                <option value="classic-flats.jpg">classic-flats.jpg</option>
+                <option value="haunted.png">haunted.png</option>
+                <option value="older.jpg">older.jpg</option>
+                <option value="stony.jpg">stony.jpg</option>
+                <option value="shiny.jpg">shiny.jpg</option>
+            </select>
+
+            <input class="btn btn-dark" type="submit" value="List" />
+        </div>
+
+    </form>
+    
+</div>

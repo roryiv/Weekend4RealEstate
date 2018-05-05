@@ -3,7 +3,8 @@ var app = angular.module('HouseApp', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
-            template: '<h2>add new one!</h2>'
+            templateUrl: 'views/add.html',
+            controller: 'AddNewController as vm'
         })
         .when('/sale', {
             templateUrl: 'views/sale.html',

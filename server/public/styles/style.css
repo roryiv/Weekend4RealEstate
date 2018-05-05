@@ -1,5 +1,37 @@
 body {
-    background-color: darkslategrey;
-    color: beige;
+    background-color: wheat;
+    color: darkslategray;
     font-family: sans-serif;
+}
+
+#links {
+    padding: 10px 0px 0px 50px;
+}
+
+.nav {
+    padding: 10px;
+    display: inline;
+    color: seagreen;
+}
+
+#pageHeader {
+    font-weight: bold;
+    background-color: tomato;
+    color: mintcream;
+    padding: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.sectionHeader {
+    padding: 50px 50px 50px 100px
+}
+
+.btn {
+    margin-top: 10px;
+    float: right;
+}
+
+.form-control {
+    margin-bottom: 20px;
 }

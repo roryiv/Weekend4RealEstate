@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
             res.send(results.rows);
         })
         .catch((error) => {
-            console.log('error with sql select', error);
+            console.log('error getting from database', error);
             res.sendStatus(500);
         });
 });
@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
             res.sendStatus(200);
         })
         .catch((error) => {
-            console.log('error with sql inset', error);
+            console.log('error posting to database', error);
             res.sendStatus(500);
         });
 });
