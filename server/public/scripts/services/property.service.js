@@ -46,5 +46,12 @@ app.service('PropService', ['$http', function ($http) {
             })
     }
 
-    self.getProps();
+    self.isRental = function (listing) {
+        if (listing.kind == 'rent') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }]);

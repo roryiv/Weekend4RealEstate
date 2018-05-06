@@ -3,12 +3,10 @@ app.controller('AddNewController', ['PropService', function(PropService){
     self.newProp = {
         cost: 0,
         sqft: 0,
-        kind: 'Rent',
+        kind: 'rent',
         city: '',
         image_path: 'rental.jpg'
     };
-    // self.properties = PropService.properties;
-    // self.getProps = PropService.getProps;
+
     self.addProp = PropService.addProp;
-    // self.deleteProp = PropService.deleteProp;
 }]);

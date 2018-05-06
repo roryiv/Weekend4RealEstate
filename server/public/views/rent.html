@@ -1,0 +1,13 @@
+<h4 class="sectionHeader">Rental Listings</h4>
+
+<div class="listings">
+    <div class="card" ng-repeat="listing in vm.properties.list" ng-show="vm.isRental(listing)">
+        <img class="card-img-top" src="../images/{{listing.image_path}}" alt="Property Image">
+        <div class="card-body">
+            <h5 class="card-title">${{listing.cost.toLocaleString('en-US', {maximumFractionDigits: 0}, {style: 'currency', currency: 'USD'})}}</h5>
+            <p class="card-text">{{listing.city}}</p>
+            <p class="card-text">{{listing.sqft}} sq. ft.</p>
+            <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>

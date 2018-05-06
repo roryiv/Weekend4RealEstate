@@ -15,7 +15,6 @@ body {
 }
 
 #pageHeader {
-    font-weight: bold;
     background-color: tomato;
     color: mintcream;
     padding: 30px;
@@ -27,11 +26,33 @@ body {
     padding: 50px 50px 50px 100px
 }
 
+.listings {
+    margin: 0px 0px 50px 150px;
+}
+
 .btn {
     margin-top: 10px;
     float: right;
 }
 
+.btn-danger {
+    float: none;
+}
+
 .form-control {
     margin-bottom: 20px;
+}
+
+.card {
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
 }
