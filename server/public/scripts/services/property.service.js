@@ -1,6 +1,13 @@
 app.service('PropService', ['$http', function ($http) {
     var self = this;
     self.properties = { list: [] };
+    self.newProp = {
+        cost: 0,
+        sqft: 0,
+        kind: 'rent',
+        city: '',
+        image_path: 'rental.jpg'
+    };
 
     self.getProps = function () {
         $http({
@@ -8,7 +15,7 @@ app.service('PropService', ['$http', function ($http) {
             url: '/property'
         })
             .then(function (response) {
-                console.log('server says', response);
+                console.log('server response to get', response.statusText);
                 self.properties.list = response.data;
             })
             .catch(function (error) {
@@ -23,8 +30,8 @@ app.service('PropService', ['$http', function ($http) {
             data: listing
         })
             .then(function (response) {
-                console.log('server says', response);
-                self.getProps();
+                console.log('server response to post', response.statusText);
+                self.resetForm();
             })
             .catch(function (error) {
                 console.log('post error', error);
@@ -38,12 +45,20 @@ app.service('PropService', ['$http', function ($http) {
             params: listing
         })
             .then(function (response) {
-                console.log('server says', response);
+                console.log('server response to delete', response.statusText);
                 self.getProps();
             })
             .catch(function (error) {
                 console.log('delete error', error);
             })
+    }
+
+    self.resetForm = function () {
+        self.newProp.cost = 0;
+        self.newProp.sqft = 0;
+        self.newProp.kind = 'rent';
+        self.newProp.city = '';
+        self.newProp.image_path = 'rental.jpg';
     }
 
     self.isRental = function (listing) {
